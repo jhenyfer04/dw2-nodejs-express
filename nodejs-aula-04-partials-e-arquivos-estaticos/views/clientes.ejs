@@ -1,0 +1,22 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>clientes</h1>
+    <hr>
+    <h3>confira nossos clientes</h3>
+
+    <!--exibindo uma variavel Javascript dentro do HTML-->
+    <!--comentario no EJS <%# %>-->
+
+    <!--percorrendo o vetor atraves do forEach-->
+      <% listaCliente.forEach(function(cliente){ %>
+         <p>
+          <a href="/clientes/<%=cliente %>">
+
+          <%= cliente %>
+
+          </a>
+        </p>
+     <%}) %>
+     
+     <p><a href="/">voltar para a pagina inicial</a></p>
+<%- include ('partials/footer.ejs') %>

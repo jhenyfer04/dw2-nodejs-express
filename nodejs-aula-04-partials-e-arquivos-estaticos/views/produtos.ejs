@@ -1,0 +1,23 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>produtos</h1>
+    <hr>
+    <h3>confira nossos produtos</h3>
+
+    <!--exibindo uma variavel Javascript dentro do HTML-->
+    <!--comentario no EJS <%# %>-->
+
+    <!--percorrendo o vetor atraves do forEach-->
+      <% listaProdutos.forEach(function(produto){ %>
+         <p>
+          <a href="/produtos/<%= produto %>">
+
+          <%= produto %>
+
+          </a>
+        </p>
+     <%}) %>
+     
+
+     <p><a href="/">voltar para a pagina inicial</a></p>
+<%- include ('partials/footer.ejs') %>
